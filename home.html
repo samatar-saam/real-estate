@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BluePeak Realty | Find Your Next Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#">
+        <div class="brand-logo">
+          <span class="brand-mark">BP</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">BluePeak</span>
+          <span class="brand-subtitle">Realty</span>
+        </div>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#listings" class="nav-link"><i class="fas fa-home"></i> Listings</a>
+          <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
+        <a href="#services" class="nav-link"><i class="fas fa-handshake"></i> Services</a>
+        <a href="#agents" class="nav-link"><i class="fas fa-users"></i> Agents</a>
+        <a href="#testimonials" class="nav-link"><i class="fas fa-star"></i> Reviews</a>
+        <a href="#blog" class="nav-link"><i class="fas fa-newspaper"></i> Blog</a>
+        <!-- <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About</a> -->
+        <a class="btn btn-outline" href="#contact"><i class="fas fa-phone-alt"></i> Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="pill">Trusted real estate partners since 2010</div>
+        <h1>Find a home you'll <span class="highlight">love</span> — faster and smarter.</h1>
+        <p class="muted">
+          BluePeak Realty is Kenya's premier real estate agency, connecting discerning buyers and sellers with exceptional properties across the country. With over a decade of experience, we've helped more than 5,000 families find their perfect homes and investors secure lucrative properties.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#listings">
+            <i class="fas fa-search"></i> Explore Listings
+          </a>
+          <a class="btn btn-secondary" href="#contact">
+            <i class="fas fa-headset"></i> Schedule Consultation
+          </a>
+          <a class="btn btn-ghost" href="#services">
+            <i class="fas fa-play-circle"></i> Watch Our Story
+          </a>
+        </div>
+
+        <!-- Search bar -->
+        <form class="search" id="searchForm">
+          <div class="search-grid">
+            <div class="search-field">
+              <label for="qLocation">
+                <i class="fas fa-map-marker-alt"></i>
+              </label>
+              <input id="qLocation" type="text" placeholder="City, neighborhood, or ZIP" />
+            </div>
+
+            <div class="search-field">
+              <label for="qType">
+                <i class="fas fa-home"></i>
+              </label>
+              <select id="qType">
+                <option value="all">Property Type</option>
+                <option value="apartment">Apartment</option>
+                <option value="house">House</option>
+                <option value="land">Land</option>
+                <option value="commercial">Commercial</option>
+                <option value="villa">Luxury Villa</option>
+                <option value="townhouse">Townhouse</option>
+              </select>
+            </div>
+
+            <div class="search-field">
+              <label for="qPrice">
+                <i class="fas fa-tag"></i>
+              </label>
+              <select id="qPrice">
+                <option value="all">Max Price</option>
+                <option value="3000000">Under KSh 3M</option>
+                <option value="5000000">KSh 3M - 5M</option>
+                <option value="10000000">KSh 5M - 10M</option>
+                <option value="20000000">KSh 10M - 20M</option>
+                <option value="50000000">KSh 20M - 50M</option>
+                <option value="100000000">Over KSh 100M</option>
+              </select>
+            </div>
+
+            <button class="btn btn-primary search-btn" type="submit">
+              <i class="fas fa-search"></i> Find Properties
+            </button>
+          </div>
+          <p class="search-tip">Try "Karen, Nairobi", type "House", max "20M" for premium family homes</p>
+        </form>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>2,500+</strong>
+            <span>Verified listings</span>
+          </div>
+          <div class="stat">
+            <strong>85+</strong>
+            <span>Expert agents</span>
+          </div>
+          <div class="stat">
+            <strong>4.9★</strong>
+            <span>Client rating</span>
+          </div>
+          <div class="stat">
+            <strong>98%</strong>
+            <span>Satisfaction rate</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image">
+          <div class="image-overlay">
+            <h3>Featured Luxury Property</h3>
+            <p>Modern Villa in Karen with Pool & Garden</p>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card-header">
+            <h3>Skyline Apartment</h3>
+            <span class="property-badge">Premium Listing</span>
+          </div>
+          <div class="card-details">
+            <p><i class="fas fa-map-marker-alt"></i> Westlands, Nairobi</p>
+            <div class="property-features">
+              <span><i class="fas fa-bed"></i> 3 Bed</span>
+              <span><i class="fas fa-bath"></i> 2.5 Bath</span>
+              <span><i class="fas fa-ruler-combined"></i> 145 m²</span>
+            </div>
+            <div class="property-amenities">
+              <span><i class="fas fa-swimming-pool"></i> Pool</span>
+              <span><i class="fas fa-dumbbell"></i> Gym</span>
+              <span><i class="fas fa-shield-alt"></i> Security</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="price">
+              <span class="amount">KSh 12,500,000</span>
+              <span class="price-label">Negotiable • Ready to Move</span>
+            </div>
+            <a href="#contact" class="btn btn-small"><i class="fas fa-calendar"></i> Schedule Tour</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Listings -->
+  <section class="section listings-section" id="listings">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Premium Property Listings</h2>
+          <p class="section-subtitle">Discover hand-picked properties across Kenya with transparent pricing, high-quality photos, and detailed information. Each listing is verified by our team for accuracy.</p>
+        </div>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all" type="button">All Properties</button>
+          <button class="filter-btn" data-filter="apartment" type="button">Apartments</button>
+          <button class="filter-btn" data-filter="house" type="button">Houses</button>
+          <button class="filter-btn" data-filter="land" type="button">Land</button>
+          <button class="filter-btn" data-filter="commercial" type="button">Commercial</button>
+          <button class="filter-btn" data-filter="luxury" type="button">Luxury</button>
+        </div>
+      </div>
+
+      <div class="listings-grid" id="listingGrid">
+        <!-- Listing 1 -->
+        <article class="listing-card" data-type="apartment" data-location="nairobi" data-price="12500000">
+          <div class="listing-image img-1">
+            <span class="listing-badge premium">Premium</span>
+            <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            <div class="image-count"><i class="fas fa-camera"></i> 24</div>
+          </div>
+          <div class="listing-content">
+            <div class="listing-header">
+              <h3>Skyline Luxury Apartment</h3>
+              <div class="listing-location">
+                <i class="fas fa-map-marker-alt"></i> Westlands, Nairobi • Prime Location
+              </div>
+            </div>
+            <p class="listing-description">Stunning 3-bedroom penthouse with panoramic city views, smart home features, and premium finishes. Includes access to rooftop pool, gym, and 24/7 concierge service.</p>
+            <div class="listing-features">
+              <span><i class="fas fa-bed"></i> 3 Bed</span>
+              <span><i class="fas fa-bath"></i> 2.5 Bath</span>
+              <span><i class="fas fa-car"></i> 2 Parking</span>
+              <span><i class="fas fa-layer-group"></i> 145 m²</span>
+            </div>
+            <div class="listing-tags">
+              <span class="tag">Smart Home</span>
+              <span class="tag">City View</span>
+              <span class="tag">Concierge</span>
+            </div>
+            <div class="listing-footer">
+              <div class="listing-price">
+                <span class="price">KSh 12,500,000</span>
+                <span class="price-per">KSh 86,207/m²</span>
+              </div>
+              <a class="btn btn-outline" href="#contact"><i class="fas fa-video"></i> Virtual Tour</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Listing 2 -->
+        <article class="listing-card" data-type="house" data-location="kiambu" data-price="24500000">
+          <div class="listing-image img-2">
+            <span class="listing-badge new">New Listing</span>
+            <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            <div class="image-count"><i class="fas fa-camera"></i> 18</div>
+          </div>
+          <div class="listing-content">
+            <div class="listing-header">
+              <h3>Garden Estate Family Home</h3>
+              <div class="listing-location">
+                <i class="fas fa-map-marker-alt"></i> Runda, Kiambu • Gated Community
+              </div>
+            </div>
+            <p class="listing-description">Spacious 5-bedroom family residence with landscaped gardens, solar power, borehole water, and modern kitchen. Perfect for families seeking security and space.</p>
+            <div class="listing-features">
+              <span><i class="fas fa-bed"></i> 5 Bed</span>
+              <span><i class="fas fa-bath"></i> 4 Bath</span>
+              <span><i class="fas fa-car"></i> 3 Parking</span>
+              <span><i class="fas fa-layer-group"></i> 320 m²</span>
+            </div>
+            <div class="listing-tags">
+              <span class="tag">Gated Community</span>
+              <span class="tag">Solar Power</span>
+              <span class="tag">Borehole</span>
+            </div>
+            <div class="listing-footer">
+              <div class="listing-price">
+                <span class="price">KSh 24,500,000</span>
+                <span class="price-per">KSh 76,563/m²</span>
+              </div>
+              <a class="btn btn-outline" href="#contact"><i class="fas fa-calendar-alt"></i> Schedule Visit</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Listing 3 -->
+        <article class="listing-card" data-type="land" data-location="kajiado" data-price="18500000">
+          <div class="listing-image img-3">
+            <span class="listing-badge investment">Investment</span>
+            <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            <div class="image-count"><i class="fas fa-camera"></i> 12</div>
+          </div>
+          <div class="listing-content">
+            <div class="listing-header">
+              <h3>Prime Development Land</h3>
+              <div class="listing-location">
+                <i class="fas fa-map-marker-alt"></i> Kitengela, Kajiado • Near CBD
+              </div>
+            </div>
+            <p class="listing-description">2-acre prime land with title deed, all utilities available, approved for mixed-use development. Perfect for residential estate or commercial complex.</p>
+            <div class="listing-features">
+              <span><i class="fas fa-expand-arrows-alt"></i> 2 Acres</span>
+              <span><i class="fas fa-tint"></i> Water Mains</span>
+              <span><i class="fas fa-bolt"></i> Electricity</span>
+              <span><i class="fas fa-road"></i> Tarmac Road</span>
+            </div>
+            <div class="listing-tags">
+              <span class="tag">Title Deed</span>
+              <span class="tag">Approved Plans</span>
+              <span class="tag">Development Ready</span>
+            </div>
+            <div class="listing-footer">
+              <div class="listing-price">
+                <span class="price">KSh 18,500,000</span>
+                <span class="price-per">KSh 9.25M per acre</span>
+              </div>
+              <a class="btn btn-outline" href="#contact"><i class="fas fa-chart-line"></i> Investment Analysis</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Listing 4 -->
+        <article class="listing-card" data-type="apartment" data-location="mombasa" data-price="28500000">
+          <div class="listing-image img-4">
+            <span class="listing-badge luxury">Luxury</span>
+            <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            <div class="image-count"><i class="fas fa-camera"></i> 32</div>
+          </div>
+          <div class="listing-content">
+            <div class="listing-header">
+              <h3>Beachfront Penthouse</h3>
+              <div class="listing-location">
+                <i class="fas fa-map-marker-alt"></i> Nyali, Mombasa • Ocean View
+              </div>
+            </div>
+            <p class="listing-description">Exclusive 4-bedroom beachfront penthouse with private beach access, infinity pool, and panoramic ocean views. Includes full staff quarters and smart home system.</p>
+            <div class="listing-features">
+              <span><i class="fas fa-bed"></i> 4 Bed</span>
+              <span><i class="fas fa-bath"></i> 4.5 Bath</span>
+              <span><i class="fas fa-swimming-pool"></i> Private Pool</span>
+              <span><i class="fas fa-layer-group"></i> 380 m²</span>
+            </div>
+            <div class="listing-tags">
+              <span class="tag">Beachfront</span>
+              <span class="tag">Ocean View</span>
+              <span class="tag">Staff Quarters</span>
+            </div>
+            <div class="listing-footer">
+              <div class="listing-price">
+                <span class="price">KSh 28,500,000</span>
+                <span class="price-per">KSh 75,000/m²</span>
+              </div>
+              <a class="btn btn-outline" href="#contact"><i class="fas fa-plane"></i> Arrange Viewing</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Listing 5 -->
+        <article class="listing-card" data-type="house" data-location="nakuru" data-price="12500000">
+          <div class="listing-image img-5">
+            <span class="listing-badge hot">Price Reduced</span>
+            <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            <div class="image-count"><i class="fas fa-camera"></i> 16</div>
+          </div>
+          <div class="listing-content">
+            <div class="listing-header">
+              <h3>Modern Lakeview Bungalow</h3>
+              <div class="listing-location">
+                <i class="fas fa-map-marker-alt"></i> Nakuru • Lake Nakuru View
+              </div>
+            </div>
+            <p class="listing-description">Contemporary 4-bedroom bungalow with stunning lake views, eco-friendly features, and landscaped gardens. Recently renovated with premium finishes.</p>
+            <div class="listing-features">
+              <span><i class="fas fa-bed"></i> 4 Bed</span>
+              <span><i class="fas fa-bath"></i> 3 Bath</span>
+              <span><i class="fas fa-solar-panel"></i> Solar System</span>
+              <span><i class="fas fa-layer-group"></i> 220 m²</span>
+            </div>
+            <div class="listing-tags">
+              <span class="tag">Lake View</span>
+              <span class="tag">Eco-Friendly</span>
+              <span class="tag">Recently Renovated</span>
+            </div>
+            <div class="listing-footer">
+              <div class="listing-price">
+                <span class="price">KSh 12,500,000</span>
+                <span class="price-per">KSh 56,818/m²</span>
+              </div>
+              <a class="btn btn-outline" href="#contact"><i class="fas fa-home"></i> Book Viewing</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Listing 6 -->
+        <article class="listing-card" data-type="commercial" data-location="nairobi" data-price="85000000">
+          <div class="listing-image img-6">
+            <span class="listing-badge commercial">Commercial</span>
+            <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            <div class="image-count"><i class="fas fa-camera"></i> 28</div>
+          </div>
+          <div class="listing-content">
+            <div class="listing-header">
+              <h3>CBD Office Building</h3>
+              <div class="listing-location">
+                <i class="fas fa-map-marker-alt"></i> Nairobi CBD • Prime Location
+              </div>
+            </div>
+            <p class="listing-description">8-story commercial building in Nairobi CBD with 100% occupancy and excellent rental yield. Modern facilities, elevator, and parking for 50+ cars.</p>
+            <div class="listing-features">
+              <span><i class="fas fa-building"></i> 8 Floors</span>
+              <span><i class="fas fa-elevator"></i> 2 Elevators</span>
+              <span><i class="fas fa-car"></i> 50+ Parking</span>
+              <span><i class="fas fa-layer-group"></i> 5,200 m²</span>
+            </div>
+            <div class="listing-tags">
+              <span class="tag">Prime Location</span>
+              <span class="tag">High Yield</span>
+              <span class="tag">Fully Occupied</span>
+            </div>
+            <div class="listing-footer">
+              <div class="listing-price">
+                <span class="price">KSh 85,000,000</span>
+                <span class="price-per">8.5% Annual Yield</span>
+              </div>
+              <a class="btn btn-outline" href="#contact"><i class="fas fa-chart-bar"></i> Financial Report</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="listings-cta">
+        <div class="cta-content">
+          <h3>Can't find what you're looking for?</h3>
+          <p>Our agents have access to exclusive listings not available publicly. Contact us for personalized property matching based on your specific requirements, budget, and timeline.</p>
+          <div class="cta-actions">
+            <a href="#contact" class="btn btn-primary"><i class="fas fa-user-plus"></i> Register for Alerts</a>
+            <a href="#services" class="btn btn-outline"><i class="fas fa-briefcase"></i> Property Consultation</a>
+          </div>
+          <p class="small-text"><i class="fas fa-lock"></i> Your information is secure and never shared</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Market Insights -->
+  <section class="section insights-section">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-title">
+          <h2>Kenya Real Estate Market Insights</h2>
+          <p class="section-subtitle">Stay informed with our comprehensive market analysis and investment guides</p>
+        </div>
+      </div>
+
+      <div class="insights-grid">
+        <div class="insight-card">
+          <div class="insight-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Market Trends 2024</h3>
+          <p>Nairobi property prices increased by 8.5% in Q1 2024, with strongest growth in satellite towns</p>
+          <a href="#" class="insight-link">Read Report <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="insight-card">
+          <div class="insight-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h3>Hot Investment Zones</h3>
+          <p>Discover emerging areas with high growth potential and upcoming infrastructure projects</p>
+          <a href="#" class="insight-link">Explore Areas <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="insight-card">
+          <div class="insight-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h3>Mortgage Calculator</h3>
+          <p>Calculate your mortgage payments and explore financing options with Kenyan banks</p>
+          <a href="#" class="insight-link">Calculate Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="insight-card">
+          <div class="insight-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3>Buyer's Guide</h3>
+          <p>Comprehensive guide for first-time buyers covering all steps of the purchase process</p>
+          <a href="#" class="insight-link">Download Guide <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-title">
+          <h2>Comprehensive Real Estate Services</h2>
+          <p class="section-subtitle">End-to-end solutions from property search to post-purchase support. We handle every detail so you can focus on what matters.</p>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3>Property Search & Matching</h3>
+          <p>Advanced property matching using AI technology to find homes that match your lifestyle, budget, and preferences. Access to exclusive off-market listings.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> AI Property Matching</li>
+            <li><i class="fas fa-check"></i> Off-Market Listings</li>
+            <li><i class="fas fa-check"></i> Neighborhood Analysis</li>
+          </ul>
+          <a href="#contact" class="service-link">Start Your Search <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3>Virtual & In-Person Tours</h3>
+          <p>3D virtual tours, drone footage, and scheduled in-person visits. Our agents provide detailed property insights during every viewing.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> 3D Virtual Tours</li>
+            <li><i class="fas fa-check"></i> Drone Photography</li>
+            <li><i class="fas fa-check"></i> Expert Guided Tours</li>
+          </ul>
+          <a href="#contact" class="service-link">Schedule a Tour <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-file-contract"></i>
+          </div>
+          <h3>Legal & Documentation</h3>
+          <p>Full legal support including due diligence, title verification, contract preparation, and transfer process management.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Title Deed Verification</li>
+            <li><i class="fas fa-check"></i> Legal Due Diligence</li>
+            <li><i class="fas fa-check"></i> Contract Management</li>
+          </ul>
+          <a href="#contact" class="service-link">Legal Consultation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Property Valuation</h3>
+          <p>Accurate market valuations using comparative analysis and market trends to ensure you buy or sell at the right price.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Comparative Market Analysis</li>
+            <li><i class="fas fa-check"></i> Investment Potential Report</li>
+            <li><i class="fas fa-check"></i> Future Value Projection</li>
+          </ul>
+          <a href="#contact" class="service-link">Get Valuation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3>Negotiation & Closing</h3>
+          <p>Expert negotiation to secure the best terms and price. We handle all closing procedures for a seamless transaction.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Price Negotiation</li>
+            <li><i class="fas fa-check"></i> Terms & Conditions</li>
+            <li><i class="fas fa-check"></i> Closing Coordination</li>
+          </ul>
+          <a href="#contact" class="service-link">Start Negotiation <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3>Post-Purchase Services</h3>
+          <p>Ongoing support including property management, renovation coordination, and connections to trusted service providers.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Property Management</li>
+            <li><i class="fas fa-check"></i> Renovation Coordination</li>
+            <li><i class="fas fa-check"></i> Service Provider Network</li>
+          </ul>
+          <a href="#contact" class="service-link">Explore Services <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="services-process">
+        <h3 class="process-title">Our 7-Step Process</h3>
+        <div class="process-steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <h4>Initial Consultation</h4>
+            <p>Understanding your needs and preferences</p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <h4>Property Search</h4>
+            <p>Curated listings based on your criteria</p>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <h4>Viewings & Tours</h4>
+            <p>Virtual and in-person property inspections</p>
+          </div>
+          <div class="step">
+            <span class="step-number">4</span>
+            <h4>Offer & Negotiation</h4>
+            <p>Strategic price and terms negotiation</p>
+          </div>
+          <div class="step">
+            <span class="step-number">5</span>
+            <h4>Due Diligence</h4>
+            <p>Legal verification and property checks</p>
+          </div>
+          <div class="step">
+            <span class="step-number">6</span>
+            <h4>Closing</h4>
+            <p>Contract signing and payment processing</p>
+          </div>
+          <div class="step">
+            <span class="step-number">7</span>
+            <h4>Post-Purchase Support</h4>
+            <p>Ongoing assistance and property management</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agents -->
+  <section class="section agents-section" id="agents">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-title">
+          <h2>Meet Our Expert Real Estate Team</h2>
+          <p class="section-subtitle">Professional agents with deep local knowledge and proven track records. Each specialist focuses on specific property types and regions.</p>
+        </div>
+        <a href="#contact" class="btn btn-outline"><i class="fas fa-user-plus"></i> Join Our Team</a>
+      </div>
+
+      <div class="agents-grid">
+        <div class="agent-card">
+          <div class="agent-image a1">
+            <div class="agent-badge">15+ Years Experience</div>
+          </div>
+          <div class="agent-info">
+            <h3>Hassan Ali</h3>
+            <p class="agent-title">Senior Property Consultant & Team Lead</p>
+            <p class="agent-specialty"><i class="fas fa-map-marker-alt"></i> Nairobi • Residential • Luxury</p>
+            <p class="agent-bio">With over 15 years in Nairobi's real estate market, Hassan specializes in luxury residential properties and has helped more than 500 families find their dream homes. Fluent in English, Swahili, and Arabic.</p>
+            <div class="agent-stats">
+              <div class="stat-item">
+                <strong>500+</strong>
+                <span>Properties Sold</span>
+              </div>
+              <div class="stat-item">
+                <strong>4.9★</strong>
+                <span>Client Rating</span>
+              </div>
+              <div class="stat-item">
+                <strong>98%</strong>
+                <span>Repeat Clients</span>
+              </div>
+            </div>
+            <div class="agent-contact">
+              <span><i class="fas fa-phone-alt"></i> +254 712 345 678</span>
+              <span><i class="fas fa-envelope"></i> hassan@bluepeak.com</span>
+            </div>
+            <div class="agent-actions">
+              <a href="#contact" class="btn btn-small"><i class="fas fa-calendar"></i> Book Consultation</a>
+              <a href="#" class="btn btn-ghost"><i class="fas fa-file"></i> View Portfolio</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="agent-card">
+          <div class="agent-image a2">
+            <div class="agent-badge">Coast Specialist</div>
+          </div>
+          <div class="agent-info">
+            <h3>Amina Noor</h3>
+            <p class="agent-title">Luxury Property & Coastal Specialist</p>
+            <p class="agent-specialty"><i class="fas fa-map-marker-alt"></i> Mombasa • Malindi • Coastal</p>
+            <p class="agent-bio">Amina brings 12 years of experience in coastal real estate, specializing in beachfront properties, luxury villas, and holiday homes. Her extensive network includes international buyers and developers.</p>
+            <div class="agent-stats">
+              <div class="stat-item">
+                <strong>300+</strong>
+                <span>Properties Sold</span>
+              </div>
+              <div class="stat-item">
+                <strong>4.8★</strong>
+                <span>Client Rating</span>
+              </div>
+              <div class="stat-item">
+                <strong>40%</strong>
+                <span>International Clients</span>
+              </div>
+            </div>
+            <div class="agent-contact">
+              <span><i class="fas fa-phone-alt"></i> +254 723 456 789</span>
+              <span><i class="fas fa-envelope"></i> amina@bluepeak.com</span>
+            </div>
+            <div class="agent-actions">
+              <a href="#contact" class="btn btn-small"><i class="fas fa-calendar"></i> Book Consultation</a>
+              <a href="#" class="btn btn-ghost"><i class="fas fa-file"></i> View Portfolio</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="agent-card">
+          <div class="agent-image a3">
+            <div class="agent-badge">Land Expert</div>
+          </div>
+          <div class="agent-info">
+            <h3>David Mwangi</h3>
+            <p class="agent-title">Land & Commercial Investment Expert</p>
+            <p class="agent-specialty"><i class="fas fa-map-marker-alt"></i> Rift Valley • Central • Land</p>
+            <p class="agent-bio">David specializes in land acquisition, agricultural properties, and commercial investments. With 10 years experience, he has helped investors secure over 5,000 acres of prime land across Kenya.</p>
+            <div class="agent-stats">
+              <div class="stat-item">
+                <strong>5,000+</strong>
+                <span>Acres Sold</span>
+              </div>
+              <div class="stat-item">
+                <strong>4.9★</strong>
+                <span>Client Rating</span>
+              </div>
+              <div class="stat-item">
+                <strong>85%</strong>
+                <span>Investment Clients</span>
+              </div>
+            </div>
+            <div class="agent-contact">
+              <span><i class="fas fa-phone-alt"></i> +254 734 567 890</span>
+              <span><i class="fas fa-envelope"></i> david@bluepeak.com</span>
+            </div>
+            <div class="agent-actions">
+              <a href="#contact" class="btn btn-small"><i class="fas fa-calendar"></i> Book Consultation</a>
+              <a href="#" class="btn btn-ghost"><i class="fas fa-file"></i> View Portfolio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="agents-team">
+        <h3>Our Support Team</h3>
+        <div class="support-team">
+          <div class="team-member">
+            <div class="member-avatar m1"></div>
+            <h4>Sarah Kinyua</h4>
+            <p>Legal Department Head</p>
+          </div>
+          <div class="team-member">
+            <div class="member-avatar m2"></div>
+            <h4>James Ochieng</h4>
+            <p>Valuation Specialist</p>
+          </div>
+          <div class="team-member">
+            <div class="member-avatar m3"></div>
+            <h4>Grace Wambui</h4>
+            <p>Client Relations Manager</p>
+          </div>
+          <div class="team-member">
+            <div class="member-avatar m4"></div>
+            <h4>Peter Maina</h4>
+            <p>Property Management</p>
+          </div>
+          <div class="team-member">
+            <div class="member-avatar m5"></div>
+            <h4>Fatima Abdullah</h4>
+            <p>Marketing Director</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-title">
+          <h2>Client Success Stories</h2>
+          <p class="section-subtitle">Real experiences from homeowners, investors, and families who found their perfect properties with BluePeak Realty</p>
+        </div>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="client-avatar c1"></div>
+            <div class="client-info">
+              <h4>Fatuma & Ahmed Abdullah</h4>
+              <p class="client-location">Family from Dubai, now in Nairobi</p>
+              <div class="client-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-text">"Relocating from Dubai to Nairobi was daunting, but Hassan made it seamless. He understood our needs perfectly and found us a beautiful home in Runda within two weeks. The legal process was handled professionally, and we felt supported every step of the way."</p>
+          <div class="testimonial-meta">
+            <span><i class="fas fa-home"></i> Purchased 5-bedroom villa in Runda</span>
+            <span><i class="fas fa-calendar-alt"></i> November 2023</span>
+            <span><i class="fas fa-clock"></i> 2 weeks from search to closing</span>
+          </div>
+          <div class="property-highlight">
+            <strong>Key Benefit:</strong> Smooth international relocation with full legal support
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="client-avatar c2"></div>
+            <div class="client-info">
+              <h4>Brian Omondi</h4>
+              <p class="client-location">Real Estate Investor, Nairobi</p>
+              <div class="client-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-text">"David helped me build a portfolio of 5 investment properties across Nairobi and Kitengela. His market insights and negotiation skills secured properties 15% below market value. The rental management service has been excellent."</p>
+          <div class="testimonial-meta">
+            <span><i class="fas fa-chart-line"></i> 5 properties, 22% average annual return</span>
+            <span><i class="fas fa-calendar-alt"></i> Portfolio built over 18 months</span>
+            <span><i class="fas fa-percentage"></i> 15% below market price average</span>
+          </div>
+          <div class="property-highlight">
+            <strong>Key Benefit:</strong> Strategic investment portfolio development
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="client-avatar c3"></div>
+            <div class="client-info">
+              <h4>Sarah & Michael Kamau</h4>
+              <p class="client-location">First-time homebuyers, Kiambu</p>
+              <div class="client-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-text">"As first-time buyers, we were overwhelmed. Amina guided us through everything - from mortgage options to legal checks. She found us a perfect starter home within our budget and even helped negotiate furniture inclusion!"</p>
+          <div class="testimonial-meta">
+            <span><i class="fas fa-home"></i> First home: 3-bedroom townhouse</span>
+            <span><i class="fas fa-calendar-alt"></i> March 2024</span>
+            <span><i class="fas fa-money-bill-wave"></i> Mortgage secured with favorable terms</span>
+          </div>
+          <div class="property-highlight">
+            <strong>Key Benefit:</strong> Complete support for first-time homebuyers
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials-video">
+        <h3>Client Video Testimonials</h3>
+        <div class="video-grid">
+          <div class="video-thumbnail">
+            <div class="video-play"><i class="fas fa-play"></i></div>
+            <p>From UK to Karen: An Expat's Story</p>
+          </div>
+          <div class="video-thumbnail">
+            <div class="video-play"><i class="fas fa-play"></i></div>
+            <p>Investment Success in 12 Months</p>
+          </div>
+          <div class="video-thumbnail">
+            <div class="video-play"><i class="fas fa-play"></i></div>
+            <p>Family Home Search Journey</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials-cta">
+        <div class="rating-overview">
+          <div class="overall-rating">
+            <span class="rating-number">4.9</span>
+            <div class="rating-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="rating-label">Average Rating</span>
+            <span class="rating-source">Google & Trustpilot</span>
+          </div>
+          <div class="rating-details">
+            <h4>Verified Results</h4>
+            <span><i class="fas fa-check-circle"></i> 5,000+ successful transactions</span>
+            <span><i class="fas fa-check-circle"></i> 98% client satisfaction rate</span>
+            <span><i class="fas fa-check-circle"></i> 65% repeat & referral clients</span>
+            <span><i class="fas fa-check-circle"></i> Average saving: 8.5% on purchase price</span>
+          </div>
+        </div>
+        <div class="cta-actions">
+          <a href="#contact" class="btn btn-primary"><i class="fas fa-comment-alt"></i> Share Your Experience</a>
+          <a href="#" class="btn btn-outline"><i class="fas fa-star"></i> Leave a Review</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog/Resources -->
+  <section class="section blog-section" id="blog">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-title">
+          <h2>Real Estate Resources & Insights</h2>
+          <p class="section-subtitle">Expert advice, market updates, and buying guides to help you make informed decisions</p>
+        </div>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-image blog-1">
+            <span class="blog-category">Market Analysis</span>
+          </div>
+          <div class="blog-content">
+            <h3>Nairobi Property Market Outlook 2024</h3>
+            <p class="blog-excerpt">Comprehensive analysis of price trends, investment hotspots, and economic factors affecting Nairobi's real estate market in the coming year.</p>
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> April 15, 2024</span>
+              <span><i class="fas fa-clock"></i> 8 min read</span>
+            </div>
+            <a href="#" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image blog-2">
+            <span class="blog-category">Buyer's Guide</span>
+          </div>
+          <div class="blog-content">
+            <h3>First-Time Home Buyer Checklist</h3>
+            <p class="blog-excerpt">Step-by-step guide covering budgeting, mortgage options, location selection, and legal considerations for new home buyers in Kenya.</p>
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> March 28, 2024</span>
+              <span><i class="fas fa-clock"></i> 12 min read</span>
+            </div>
+            <a href="#" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-image blog-3">
+            <span class="blog-category">Investment Guide</span>
+          </div>
+          <div class="blog-content">
+            <h3>Top 5 Real Estate Investment Strategies</h3>
+            <p class="blog-excerpt">Compare rental properties, land banking, commercial real estate, and other investment approaches with their risk/reward profiles.</p>
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> April 5, 2024</span>
+              <span><i class="fas fa-clock"></i> 10 min read</span>
+            </div>
+            <a href="#" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="blog-newsletter">
+        <h3>Subscribe to Our Market Updates</h3>
+        <p>Get weekly insights, new listings, and exclusive investment opportunities delivered to your inbox</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="small-text"><i class="fas fa-lock"></i> We respect your privacy. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <div class="section-title">
+            <h2>About BluePeak Realty</h2>
+            <p class="section-subtitle">Kenya's trusted real estate partner since 2010</p>
+          </div>
+          
+          <div class="about-story">
+            <p>Founded in 2010 by a team of passionate real estate professionals, BluePeak Realty has grown to become one of Kenya's most respected property agencies. Our journey began with a simple mission: to make real estate transactions transparent, efficient, and stress-free for all parties involved.</p>
+            
+            <p>Over the past 14 years, we've helped over 5,000 clients navigate the Kenyan property market, from first-time homebuyers to large-scale investors. Our team of 85+ experts brings together diverse skills in property valuation, legal services, market analysis, and customer relations.</p>
+          </div>
+
+          <div class="about-values">
+            <h3>Our Core Values</h3>
+            <div class="values-grid">
+              <div class="value-item">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Integrity</h4>
+                <p>Transparent dealings and honest advice in every transaction</p>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-users"></i>
+                <h4>Client Focus</h4>
+                <p>Personalized service tailored to each client's unique needs</p>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-chart-line"></i>
+                <h4>Expertise</h4>
+                <p>Deep market knowledge and continuous professional development</p>
+              </div>
+              <div class="value-item">
+                <i class="fas fa-handshake"></i>
+                <h4>Partnership</h4>
+                <p>Building long-term relationships based on trust and results</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-awards">
+            <h3>Awards & Recognition</h3>
+            <div class="awards-list">
+              <div class="award">
+                <i class="fas fa-trophy"></i>
+                <div>
+                  <h4>Best Real Estate Agency 2023</h4>
+                  <p>Kenya Property Awards</p>
+                </div>
+              </div>
+              <div class="award">
+                <i class="fas fa-award"></i>
+                <div>
+                  <h4>Excellence in Customer Service</h4>
+                  <p>Real Estate Excellence Awards 2022</p>
+                </div>
+              </div>
+              <div class="award">
+                <i class="fas fa-star"></i>
+                <div>
+                  <h4>Top 10 Real Estate Companies</h4>
+                  <p>Business Daily Ranking 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-card">
+            <h3>Our Impact in Numbers</h3>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <strong>14</strong>
+                <span>Years of Excellence</span>
+              </div>
+              <div class="stat-item">
+                <strong>5,000+</strong>
+                <span>Happy Clients</span>
+              </div>
+              <div class="stat-item">
+                <strong>85+</strong>
+                <span>Expert Team Members</span>
+              </div>
+              <div class="stat-item">
+                <strong>KES 45B+</strong>
+                <span>Property Value Transacted</span>
+              </div>
+              <div class="stat-item">
+                <strong>98%</strong>
+                <span>Client Satisfaction</span>
+              </div>
+              <div class="stat-item">
+                <strong>24/7</strong>
+                <span>Client Support</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="partners">
+            <h3>Trusted Partners</h3>
+            <div class="partner-logos">
+              <div class="partner-logo">CBA Bank</div>
+              <div class="partner-logo">KCB Group</div>
+              <div class="partner-logo">Absa Kenya</div>
+              <div class="partner-logo">KNCHR</div>
+              <div class="partner-logo">PPOA</div>
+              <div class="partner-logo">NEMA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header center">
+        <div class="section-title">
+          <h2>Contact BluePeak Realty</h2>
+          <p class="section-subtitle">Ready to start your property journey? Get in touch with our team for personalized assistance</p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-form-container">
+          <h3>Send Us a Message</h3>
+          <p>Fill out the form below and one of our specialists will contact you within 24 hours</p>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Full Name *</label>
+                <input type="text" id="name" placeholder="e.g., Samatar Mohamed" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp *</label>
+                <input type="tel" id="phone" placeholder="e.g., +254 7xx xxx xxx" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="e.g., you@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="interest">I'm interested in:</label>
+              <select id="interest" multiple>
+                <option value="buying">Buying a Property</option>
+                <option value="selling">Selling a Property</option>
+                <option value="renting">Renting a Property</option>
+                <option value="investing">Property Investment</option>
+                <option value="valuation">Property Valuation</option>
+                <option value="consultation">General Consultation</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="propertyType">Property Type</label>
+                <select id="propertyType">
+                  <option value="">Select type</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="house">House</option>
+                  <option value="land">Land</option>
+                  <option value="commercial">Commercial</option>
+                  <option value="luxury">Luxury Property</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="budget">Budget Range (KES)</label>
+                <select id="budget">
+                  <option value="">Select budget</option>
+                  <option value="0-5m">Under 5 Million</option>
+                  <option value="5-10m">5M - 10M</option>
+                  <option value="10-20m">10M - 20M</option>
+                  <option value="20-50m">20M - 50M</option>
+                  <option value="50m+">Over 50 Million</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="location">Preferred Locations</label>
+              <input type="text" id="location" placeholder="e.g., Nairobi, Mombasa, specific neighborhoods" />
+            </div>
+
+            <div class="form-group">
+              <label for="timeline">Timeline</label>
+              <select id="timeline">
+                <option value="">When do you plan to buy/sell?</option>
+                <option value="immediately">Immediately</option>
+                <option value="1-3months">Within 1-3 months</option>
+                <option value="3-6months">Within 3-6 months</option>
+                <option value="6-12months">Within 6-12 months</option>
+                <option value="exploring">Just exploring options</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Specific Requirements *</label>
+              <textarea id="message" rows="5" placeholder="Tell us about your needs: number of bedrooms, specific features, must-haves, deal-breakers, etc..." required></textarea>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+              <p class="form-note"><i class="fas fa-lock"></i> Your information is secure and confidential. We'll never share your details.</p>
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-info-container">
+          <div class="contact-info-card">
+            <h3>Contact Information</h3>
+            <p>Reach out through any channel convenient for you</p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Head Office - Nairobi</h4>
+                  <p>BluePeak Realty Headquarters</p>
+                  <p>Westlands Business Center, 4th Floor</p>
+                  <p>Chiromo Road, Westlands</p>
+                  <p>Nairobi, Kenya</p>
+                  <p class="map-link"><a href="#"><i class="fas fa-directions"></i> Get Directions</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Working Hours</h4>
+                  <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</p>
+                  <p><strong>Saturday:</strong> 9:00 AM - 4:00 PM</p>
+                  <p><strong>Sunday:</strong> By appointment only</p>
+                  <p><strong>Emergency:</strong> 24/7 for existing clients</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Phone Numbers</h4>
+                  <p><strong>Main Office:</strong> +254 (0) 20 123 4567</p>
+                  <p><strong>Sales Enquiries:</strong> +254 (0) 711 123 456</p>
+                  <p><strong>Client Support:</strong> +254 (0) 722 987 654</p>
+                  <p><strong>WhatsApp Business:</strong> +254 (0) 700 112 233</p>
+                  <p class="call-now"><a href="tel:+254201234567"><i class="fas fa-phone-volume"></i> Call Now</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Email Addresses</h4>
+                  <p><strong>General Inquiries:</strong> info@bluepeakrealty.com</p>
+                  <p><strong>Sales Team:</strong> sales@bluepeakrealty.com</p>
+                  <p><strong>Client Support:</strong> support@bluepeakrealty.com</p>
+                  <p><strong>Careers:</strong> careers@bluepeakrealty.com</p>
+                  <p class="email-now"><a href="mailto:info@bluepeakrealty.com"><i class="fas fa-envelope-open-text"></i> Email Now</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="branch-locations">
+              <h4>Branch Locations</h4>
+              <div class="branches">
+                <div class="branch">
+                  <i class="fas fa-building"></i>
+                  <div>
+                    <h5>Mombasa Branch</h5>
+                    <p>Nyali Center, 2nd Floor • +254 41 123456</p>
+                  </div>
+                </div>
+                <div class="branch">
+                  <i class="fas fa-building"></i>
+                  <div>
+                    <h5>Kisumu Branch</h5>
+                    <p>Mega Plaza, 3rd Floor • +254 57 123456</p>
+                  </div>
+                </div>
+                <div class="branch">
+                  <i class="fas fa-building"></i>
+                  <div>
+                    <h5>Nakuru Branch</h5>
+                    <p>Westside Mall • +254 51 123456</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <h4>Connect With Us</h4>
+              <p>Follow us for property updates and market insights</p>
+              <div class="social-icons">
+                <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-cta">
+            <div class="cta-card">
+              <i class="fas fa-calendar-check"></i>
+              <h4>Schedule a Free Consultation</h4>
+              <p>Book a 30-minute video call or in-person meeting with one of our specialists</p>
+              <a href="#" class="btn btn-primary"><i class="fas fa-video"></i> Book Online Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-faq">
+        <h3>Frequently Asked Questions</h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h4>How quickly can I view a property?</h4>
+            <p>We can arrange viewings within 24-48 hours for most properties. Virtual tours are available immediately for many listings.</p>
+          </div>
+          <div class="faq-item">
+            <h4>What are your fees for buyers?</h4>
+            <p>For property buyers, our services are typically free. We're compensated by the seller. There are no hidden fees.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Do you work with international clients?</h4>
+            <p>Yes, we have extensive experience working with expatriates and international investors, including handling remote transactions.</p>
+          </div>
+          <div class="faq-item">
+            <h4>How do you verify property titles?</h4>
+            <p>We conduct thorough due diligence at the Ministry of Lands and work with licensed advocates to verify all documentation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="brand-mark">BP</span>
+            <div class="footer-brand-text">
+              <span class="brand-name">BluePeak</span>
+              <span class="brand-subtitle">Realty</span>
+            </div>
+          </div>
+          <p class="footer-tagline">Transparent • Professional • Trusted</p>
+          <p>Kenya's premier real estate agency with 14 years of excellence in property transactions, investment advisory, and client service.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Properties</h4>
+            <a href="#listings">Browse Listings</a>
+            <a href="#">New Developments</a>
+            <a href="#">Luxury Properties</a>
+            <a href="#">Commercial Real Estate</a>
+            <a href="#">Land for Sale</a>
+            <a href="#">Rental Properties</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Services</h4>
+            <a href="#services">Buyer Services</a>
+            <a href="#services">Seller Services</a>
+            <a href="#services">Property Valuation</a>
+            <a href="#services">Investment Advisory</a>
+            <a href="#services">Property Management</a>
+            <a href="#services">Legal Services</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Company</h4>
+            <a href="#about">About Us</a>
+            <a href="#agents">Meet Our Team</a>
+            <a href="#testimonials">Client Reviews</a>
+            <a href="#blog">Blog & Insights</a>
+            <a href="#">Careers</a>
+            <a href="#">Press & Media</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <a href="#">Market Reports</a>
+            <a href="#">Mortgage Calculator</a>
+            <a href="#">Buyer's Guide</a>
+            <a href="#">Seller's Guide</a>
+            <a href="#">Investment Guide</a>
+            <a href="#">FAQ</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Contact</h4>
+            <a href="#contact">Contact Us</a>
+            <a href="#">Book Consultation</a>
+            <a href="#">Branch Locations</a>
+            <a href="#">Support Center</a>
+            <a href="#">Feedback</a>
+            <a href="#">Schedule Tour</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-legal">
+          <p>&copy; 2010 - <span id="currentYear"></span> BluePeak Realty Ltd. All rights reserved.</p>
+          <div class="legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Disclosure Statement</a>
+            <a href="#">Code of Ethics</a>
+          </div>
+        </div>
+
+        <div class="footer-certifications">
+          <div class="certification">
+            <i class="fas fa-shield-alt"></i>
+            <span>Licensed Real Estate Broker</span>
+          </div>
+          <div class="certification">
+            <i class="fas fa-award"></i>
+            <span>Member: Kenya Property Agents Association</span>
+          </div>
+          <div class="certification">
+            <i class="fas fa-user-check"></i>
+            <span>Verified by Trustpilot</span>
+          </div>
+        </div>
+
+        <div class="footer-newsletter">
+          <p>Subscribe to our monthly market insights</p>
+          <form class="footer-newsletter-form">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div> 
+
+      <div class="footer-disclaimer">
+        <p><strong>Disclaimer:</strong> Property information is deemed reliable but not guaranteed. Prices and availability subject to change without notice. BluePeak Realty Ltd is licensed under the Estate Agents Act of Kenya. License Number: EA-0457-2023.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html> 
